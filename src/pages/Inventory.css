@@ -1,0 +1,13 @@
+.inventory {
+  /* width: 100%; */
+  position: relative;
+  background-color: var(--main-background);
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.inventory-container {
+  width: 100%;
+  min-width: 92vw;
+}

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+:root {
+    /* fonts */
+    --label-2-regular: Inter;
+    --subheading-3-medium: Poppins;
+
+    /* font sizes */
+    --label-1-regular-size: 0.75rem;
+    --paragraph-2-regular-size: 0.875rem;
+    --label-2-regular-size: 0.688rem;
+    --paragraph-1-medium-size: 1rem;
+    --subheading-3-medium-size: 1.25rem;
+
+    /* Colors */
+    --main-background: #f5f5fa;
+    --stroke: #f1f3f9;
+    --white: #fff;
+    --black-40: #6e7079;
+    --one-liquidity-text-black-50: #666;
+    --black-50: #53545d;
+    --color-dimgray-100: rgba(94, 99, 102, 0.08);
+    --color-dimgray-200: rgba(94, 99, 102, 0.1);
+    --secondary-100: #ffcc91;
+    --color-burlywood-100: rgba(255, 204, 145, 0.2);
+    --action-red: #cc5f5f;
+    --color-indianred-100: rgba(204, 95, 95, 0);
+    --primary-100: #5570f1;
+    --color-royalblue-100: rgba(85, 112, 241, 0.16);
+    --color-royalblue-200: rgba(85, 112, 241, 0);
+    --black-100: #1c1d22;
+    --grey: #e1e2e9;
+    --black-30: #8b8d97;
+    --color-darkgray-100: #abafb1;
+    --black-20: #a5a8b1;
+    --color-lightgray: #cfd3d4;
+    --secondary-30: #fff2e2;
+    --black-60: #45464e;
+    --black-90: #2c2d33;
+    --action-green: #519c66;
+    --black-10: #bec0ca;
+    --primary-10: #dbdeee;
+    --secondary-20: #fef5ea;
+
+    /* Gaps */
+    --gap-xs: 0.75rem;
+    --gap-xl: 1.25rem;
+    --gap-5xs: 0.5rem;
+    --gap-6xs: 0.437rem;
+    --gap-base: 1rem;
+    --gap-13xl: 2rem;
+    --gap-2xs: 0.687rem;
+
+    /* Paddings */
+    --padding-2xs: 0.687rem;
+    --padding-base: 1rem;
+    --padding-xl: 1.25rem;
+    --padding-9xs: 0.25rem;
+    --padding-5xs: 0.5rem;
+    --padding-mini: 0.937rem;
+    --padding-sm: 0.875rem;
+    --padding-2xl: 1.312rem;
+    --padding-8xs: 0.312rem;
+    --padding-xs: 0.75rem;
+
+    /* Border radiuses */
+    --br-base: 16px;
+    --br-xs: 12px;
+    --br-481xl: 500px;
+    --br-5xs: 8px;
+    --br-9xs: 4px;
+}

@@ -1,0 +1,136 @@
+.dashboard {
+    font-weight: 500;
+    font-family: var(--label-2-regular);
+}
+
+.top-nav .dashboard {
+    font-size: var(--subheading-3-medium-size);
+}
+
+.dashboard,
+.nannys-shop {
+    position: relative;
+}
+
+.fichevron-down-icon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.icon,
+.nannys-shop-parent {
+    display: flex;
+    align-items: center;
+}
+
+.nannys-shop-parent {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--gap-xl);
+}
+
+.icon {
+    align-self: stretch;
+    border-radius: var(--br-5xs);
+    background-color: var(--secondary-20);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-8xs) var(--padding-xs);
+    border: none;
+    font-size: var(--paragraph-1-regular-size);
+}
+
+.iconnotification,
+.profile-icon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 32px;
+    border-radius: var(--br-5xs);
+    height: 32px;
+    object-fit: cover;
+}
+
+.navcontainer,
+.profile,
+.topnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    justify-content: flex-start;
+    gap: var(--gap-xl);
+    font-size: var(--paragraph-2-regular-size);
+    color: var(--black-100);
+    font-family: var(--label-2-regular);
+}
+
+.navcontainer,
+.topnav {
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.topnav {
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-2xl);
+}
+
+.iconhome {
+    width: 16px;
+    position: relative;
+    height: 16px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.breadcrumbs,
+.page,
+.content,
+.top-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.page,
+.content {
+    flex-direction: row;
+    gap: var(--gap-2xs);
+}
+
+.breadcrumbs,
+.top-nav {
+    flex-direction: column;
+}
+
+.breadcrumbs {
+    align-self: stretch;
+    background-color: var(--white);
+    border-top: 1px solid var(--stroke);
+    padding: var(--padding-9xs) var(--padding-xl);
+    font-size: var(--label-1-regular-size);
+    color: var(--black-30);
+    font-family: var(--label-2-regular);
+}
+
+.top-nav {
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+}
