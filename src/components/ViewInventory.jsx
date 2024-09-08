@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ViewInventory.css'
 import { useLocation } from 'react-router-dom'
+import data from '../data/inventory'
 
 const ViewInventory = () => {
     const location = useLocation()
     const { id } = location.state
+    const p = data.find(prod => prod.id === id)
+
+    useEffect(() => {
+        console.log(p);
+
+    }, [])
 
     return (
         <div className='view'>
             <div className="view-heading">
                 <div className="heading-left">
                     <div className="head-info">
-                        <div className="head-title">Polo T-Shirt</div>
+                        <div className="head-title">{p.name}</div>
                     </div>
                     <div className="head-info">
                         <div className="head-title">Date Added</div>
@@ -19,7 +26,7 @@ const ViewInventory = () => {
                     </div>
                     <div className="head-info">
                         <div className="head-title">Product URL</div>
-                        <div className="head-text">1nancystores.com/polot-shirt</div>
+                        <div className="head-text">{p.url}</div>
                         <img className='copy-icon' src="./u_copy-alt.png" alt="" />
                     </div>
                 </div>
