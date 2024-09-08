@@ -594,6 +594,9 @@ color: var(--primary-100);
   display: grid;
   grid-template-columns: .375fr .375fr 1.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--black-40);
 }
 
 .tablerow:hover {

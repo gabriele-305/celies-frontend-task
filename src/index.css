@@ -56,6 +56,7 @@ body {
     --gap-base: 1rem;
     --gap-13xl: 2rem;
     --gap-2xs: 0.687rem;
+    --gap-2xl: 1.5rem;
 
     /* Paddings */
     --padding-2xs: 0.687rem;
@@ -68,6 +69,8 @@ body {
     --padding-2xl: 1.312rem;
     --padding-8xs: 0.312rem;
     --padding-xs: 0.75rem;
+    --padding-4xl: 1.5rem;
+    --padding-8xl: 2rem;
 
     /* Border radiuses */
     --br-base: 16px;

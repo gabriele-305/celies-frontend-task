@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import './Topbar.css'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Topbar = () => {
     const location = useLocation()
     const { pathname } = location
+    const navi = useNavigate()
 
     return (
         <div className='topbar'>
@@ -40,13 +41,20 @@ const Topbar = () => {
                         <img className="iconhome" alt="" src="/iconlybulkhome.svg" />
                         <div className="page">
                             <div className="nannys-shop">/</div>
-                            <div className="nannys-shop">Inventory</div>
+                            <div onClick={() => { pathname !== "/" && navi("/") }} className={`nannys-shop ${pathname !== "/" ? "navi-link" : ""}`}>Inventory</div>
                         </div>
                         {
                             pathname === "/add" &&
                             <div className="page">
                                 <div className="nannys-shop">/</div>
                                 <div className="nannys-shop">New Inventory</div>
+                            </div>
+                        }
+                        {
+                            pathname === "/view" &&
+                            <div className="page">
+                                <div className="nannys-shop">/</div>
+                                <div className="nannys-shop">View Inventory</div>
                             </div>
                         }
                         <div className="page hide">
