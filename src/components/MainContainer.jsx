@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import "./MainContainer.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import data from "../data/inventory";
+import { useEffect } from "react";
 
 const MainContainer = ({ className = "" }) => {
   const location = useNavigate()
@@ -50,7 +52,7 @@ const MainContainer = ({ className = "" }) => {
               <div className="navcontainer">
                 <img className="card-icon" alt="" src="/icon1.svg" />
                 <select className="card-filter">
-                  <option selected>This Week</option>
+                  <option>This Week</option>
                 </select>
                 {/* <div className="filter1">
                   <div className="nannys-shop">This Week</div>
@@ -240,321 +242,42 @@ const MainContainer = ({ className = "" }) => {
                 </div> */}
               </div>
               {/* <div className="tablerowcontainer"> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls">
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-3@2x.png"
-                />
-                <div className="prod-name">iPhone 13 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦1,225,000.00</div>
-                <div className="prod-qty">8</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
+              {
+                data.map((p, index) => (
+                  <Link to="/view" key={index} className="tablerow">
+                    <div className="prod-controls">
+                      <input type="checkbox" className="controls" />
+                    </div>
+                    <img
+                      className="prod-img"
                       alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              {/* </div> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-31@2x.png"
-                />
-                <div className="prod-name">iPhone 12 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦725,000.00</div>
-                <div className="prod-qty">12</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              <div className="tablerow">
-                {/* <div className="colcontents2"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-32@2x.png"
-                />
-                <div className="prod-name">Polo T-Shirt</div>
-                <div className="prod-category">Fashion</div>
-                <div className="prod-price">₦125,000.00</div>
-                <div className="prod-qty">120</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Unpublish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status unpublished">Unpublished</div>
-                </div>
-                {/* </div> */}
-              </div>
-              <div className="tablerow">
-                {/* <div className="colcontents2"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-32@2x.png"
-                />
-                <div className="prod-name">Polo T-Shirt</div>
-                <div className="prod-category">Fashion</div>
-                <div className="prod-price">₦125,000.00</div>
-                <div className="prod-qty"><div className="out-of-stock">Out of Stock</div></div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Unpublish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status unpublished">Unpublished</div>
-                </div>
-                {/* </div> */}
-              </div>
-              <div className="tablerow">
-                {/* <div className="colcontents2"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-32@2x.png"
-                />
-                <div className="prod-name">Polo T-Shirt</div>
-                <div className="prod-category">Fashion</div>
-                <div className="prod-price">₦125,000.00</div>
-                <div className="prod-qty"><div className="out-of-stock">Out of Stock</div></div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Unpublish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status unpublished">Unpublished</div>
-                </div>
-                {/* </div> */}
-              </div>
-              {/* <div className="tablerowcontainer"> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-3@2x.png"
-                />
-                <div className="prod-name">iPhone 13 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦1,225,000.00</div>
-                <div className="prod-qty">8</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              {/* </div> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-31@2x.png"
-                />
-                <div className="prod-name">iPhone 12 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦725,000.00</div>
-                <div className="prod-qty">12</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              {/* <div className="tablerowcontainer"> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-3@2x.png"
-                />
-                <div className="prod-name">iPhone 13 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦1,225,000.00</div>
-                <div className="prod-qty">8</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              {/* </div> */}
-              <div className="tablerow">
-                {/* <div className="colcontents"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-31@2x.png"
-                />
-                <div className="prod-name">iPhone 12 Pro</div>
-                <div className="prod-category">Gadgets</div>
-                <div className="prod-price">₦725,000.00</div>
-                <div className="prod-qty">12</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Publish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status published">Published</div>
-                </div>
-                {/* </div> */}
-              </div>
-              <div className="tablerow">
-                {/* <div className="colcontents2"> */}
-                <div className="prod-controls" >
-                  <input type="checkbox" className="controls" />
-                </div>
-                <img
-                  className="prod-img"
-                  alt=""
-                  src="/rectangle-32@2x.png"
-                />
-                <div className="prod-name">Polo T-Shirt</div>
-                <div className="prod-category">Fashion</div>
-                <div className="prod-price">₦125,000.00</div>
-                <div className="prod-qty">120</div>
-                <div className="prod-discount">₦0.00</div>
-                <div className="prod-total">₦50,000.00</div>
-                <div className="prod-tool">
-                  <select className="publish-parent">
-                    <option className="nannys-shop">Unpublish</option>
-                    {/* <img
-                      className="fifilter-icon"
-                      alt=""
-                      src="/fichevrondown4.svg"
-                    /> */}
-                  </select>
-                </div>
-                <div className="prod-status-container">
-                  <div className="nannys-shop prod-status unpublished">Unpublished</div>
-                </div>
-                {/* </div> */}
-              </div>
+                      src={p.image}
+                    />
+                    <div className="prod-name">{p.name}</div>
+                    <div className="prod-category">{p.category}</div>
+                    <div className="prod-price">₦{p.price}</div>
+                    <div className="prod-qty">{p.stock === "0" ? <div className="out-of-stock">Out of Stock</div> : p.stock}</div>
+                    <div className="prod-discount">₦{p.discount}</div>
+                    <div className="prod-total">₦{p.total}</div>
+                    <div className="prod-tool">
+                      <select className="publish-parent">
+                        {
+                          p.status === "published" ?
+                            <option className="nannys-shop">Publish</option> :
+                            <option className="nannys-shop">Unublish</option>
+                        }
+                      </select>
+                    </div>
+                    <div className="prod-status-container">
+                      {
+                        p.status === "published" ?
+                          <div className="nannys-shop prod-status published">Published</div> :
+                          <div className="nannys-shop prod-status unpublished">Unpublished</div>
+                      }
+                    </div>
+                  </Link>
+                ))
+              }
               <div className="tableheader1">
                 <div className="footer-first">
                   {/* <div className="icon14"> */}
@@ -602,7 +325,7 @@ const MainContainer = ({ className = "" }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

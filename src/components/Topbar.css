@@ -134,3 +134,8 @@
     /* left: 0; */
     width: 100%;
 }
+
+.navi-link {
+    color: blue;
+    cursor: pointer;
+}
