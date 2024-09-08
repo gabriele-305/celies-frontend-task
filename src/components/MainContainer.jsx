@@ -244,7 +244,7 @@ const MainContainer = ({ className = "" }) => {
               {/* <div className="tablerowcontainer"> */}
               {
                 data.map((p, index) => (
-                  <Link to="/view" key={index} className="tablerow">
+                  <Link to="/view" state={{ "id": p.id }} key={index} className="tablerow">
                     <div className="prod-controls">
                       <input type="checkbox" className="controls" />
                     </div>

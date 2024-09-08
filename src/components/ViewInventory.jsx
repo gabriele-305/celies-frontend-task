@@ -1,7 +1,11 @@
 import React from 'react'
 import './ViewInventory.css'
+import { useLocation } from 'react-router-dom'
 
 const ViewInventory = () => {
+    const location = useLocation()
+    const { id } = location.state
+
     return (
         <div className='view'>
             <div className="view-heading">
@@ -25,6 +29,9 @@ const ViewInventory = () => {
                     </select>
                     <div className='action'>Unpublish Product</div>
                 </div>
+            </div>
+            <div className="view-body">
+                {id}
             </div>
         </div>
     )

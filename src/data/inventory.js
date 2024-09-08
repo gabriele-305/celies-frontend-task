@@ -1,5 +1,6 @@
 const data = [
     {
+        "id": "1",
         "name": "iPhone 13 Pro",
         "category": "Gadgets",
         "price": "1,225,000.00",
@@ -18,6 +19,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "2",
         "name": "iPhone 12 Pro",
         "category": "Gadgets",
         "price": "725,000.00",
@@ -36,6 +38,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "3",
         "name": "Polo T-Shirt",
         "category": "Fashion",
         "price": "125,000.00",
@@ -54,6 +57,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "4",
         "name": "Polo T-Shirt",
         "category": "Fashion",
         "price": "125,000.00",
@@ -72,6 +76,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "5",
         "name": "Polo T-Shirt",
         "category": "Fashion",
         "price": "125,000.00",
@@ -90,6 +95,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "6",
         "name": "iPhone 13 Pro",
         "category": "Gadgets",
         "price": "1,225,000.00",
@@ -108,6 +114,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "7",
         "name": "iPhone 12 Pro",
         "category": "Gadgets",
         "price": "725,000.00",
@@ -126,6 +133,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "8",
         "name": "iPhone 13 Pro",
         "category": "Gadgets",
         "price": "1,225,000.00",
@@ -144,6 +152,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "9",
         "name": "iPhone 12 Pro",
         "category": "Gadgets",
         "price": "725,000.00",
@@ -162,6 +171,7 @@ const data = [
         "damaged": "0"
     },
     {
+        "id": "10",
         "name": "Polo T-Shirt",
         "category": "Fashion",
         "price": "125,000.00",
