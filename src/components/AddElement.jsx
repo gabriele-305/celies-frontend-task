@@ -11,21 +11,20 @@ const AddElement = ({ className = "" }) => {
     const [expiry, setexpiry] = useState('');
 
     return (
-        <div className={`maincontainer1 ${className}`}>
+        <div className="maincontainer2">
             <div className="topcontainer">
-
                 <div className="dashboard">New Inventory Item</div>
                 <div className="buttons-container">
-                    <div className="button-black" onClick={() => location("/view")}>
-                        <div className="label-container-1">
-                            <img className="arw-dwn-icon" alt="" src="/fi_chevron-down.svg" />
-                            <div className="nannys-shop">Save as Draft</div>
+                    <div className="buttons">
+                        <div className="label-container">
+                            <div className="text-wrapper">Save as Draft</div>
+                            <img className="line" alt="Line" src="line-1.svg" />
+                            <img className="fi-chevron-down" color="white" src="fi_chevron-down.svg" />
                         </div>
                     </div>
-                    <div className="label-container-1" onClick={() => location("/")}>
-                        <div className="nannys-shop">Save & Publish</div>
-                        <div className="icon-container">
-                            <img className="arrwdwn-icon" alt="" src="/fiplus.svg" />
+                    <div className="buttons-blue">
+                        <div className="label-container-blue">
+                            <div className="save-publish">Save &amp; Publish</div>
                         </div>
                     </div>
                 </div>

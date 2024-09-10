@@ -1,29 +1,120 @@
-.maincontainer1 {
+.maincontainer2 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
-  gap: var(--gap-xl);
-  font-size: var(--paragraph-1-medium-size);
-  font-family: var(--label-2-regular);
-  margin-top: 0.5rem;
+  gap: 1.25rem;
+  padding-top: 1.4375rem;
 }
 
 .maincontainerdisplay1 {
   display: flex;
   padding: 1.75rem 2.0625rem 15.375rem 1.9063rem;
   justify-content: center;
-  align-items: flex-end;
-  gap: 4.1563rem;
   align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex: 1 0 0;
 }
+
+.buttons {
+  align-items: center;
+  background-color: var(--black-100);
+  border-radius: 0.75rem;
+  display: inline-flex;
+  gap: 0.625rem;
+  height: 2.25rem;
+  justify-content: center;
+  padding: 1.0625rem 1rem;
+  position: relative;
+}
+
+.buttons .label-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -0.6875rem;
+  margin-top: -0.6875rem;
+  position: relative;
+  width: 8.6875rem;
+}
+
+.buttons .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.buttons .line {
+  height: 1.4375rem;
+  object-fit: cover;
+  position: relative;
+  width: 0.0625rem;
+}
+
+.buttons .fi-chevron-down {
+  height: 1.5rem !important;
+  position: relative !important;
+  width: 1.5rem !important;
+}
+
+.buttons-blue {
+  align-items: center;
+  background-color: rgba(85, 112, 241, 1);
+  border-radius: 0.75rem;
+  display: inline-flex;
+  gap: 0.625rem;
+  justify-content: center;
+  padding: 1.0625rem 1rem;
+  position: relative;
+}
+
+.buttons-blue .label-container-blue {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-around;
+  margin-bottom: -0.4688rem;
+  margin-left: -0.0313rem;
+  margin-right: -0.0313rem;
+  margin-top: -0.4688rem;
+  position: relative;
+  width: 8.125rem;
+}
+
+.buttons-blue .save-publish {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.0625rem;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
 
 .topcontainer {
   display: flex;
-  padding: var(--padding-sm) var(--padding-2xl);
-  width: 81.9375rem;
   justify-content: space-between;
   align-items: center;
+  align-self: stretch;
+  padding-left: 1.9063rem;
+  padding-right: 2.0625rem;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .leftcontainer {
@@ -112,31 +203,6 @@
   letter-spacing: var(--input-placeholder-letter-spacing);
   line-height: var(--input-placeholder-line-height);
   position: relative;
-}
-
-.buttons-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.label-container-1 {
-  display: flex;
-  width: 8.6875rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.button-black {
-  display: flex;
-  height: 2.25rem;
-  padding: 1.0625rem 1rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 0.75rem;
-  background: var(--Black-100, #1C1D22);
 }
 
 .frame {
