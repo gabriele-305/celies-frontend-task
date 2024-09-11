@@ -24,7 +24,7 @@ const AddElement = ({ className = "" }) => {
             <div className="topcontainer">
                 <div className="dashboard">New Inventory Item</div>
                 <div className="buttons-container">
-                    <div className="buttons">
+                    <div className="buttons-black">
                         <div className="label-container">
                             <div className="text-wrapper">Save as Draft</div>
                             <img className="line" alt="Line" src="line-1.svg" />

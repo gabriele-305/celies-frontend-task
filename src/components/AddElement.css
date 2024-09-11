@@ -170,19 +170,21 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-.buttons {
-  align-items: center;
+.buttons-black {
+  width: 11rem;
+  border-radius: var(--br-xs);
   background-color: var(--black-100);
-  border-radius: 0.75rem;
-  display: inline-flex;
-  gap: 0.625rem;
   height: 2.25rem;
   justify-content: center;
-  padding: 1.0625rem 1rem;
-  position: relative;
+  padding: 1.0625rem var(--padding-base);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--paragraph-2-regular-size);
+  color: var(--white);
+  cursor: pointer;
 }
 
-.buttons .label-container {
+.buttons-black .label-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -192,7 +194,7 @@ input:checked+.slider:before {
   width: 8.6875rem;
 }
 
-.buttons .text-wrapper {
+.buttons-black .text-wrapper {
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   font-size: 0.875rem;
@@ -204,28 +206,31 @@ input:checked+.slider:before {
   width: fit-content;
 }
 
-.buttons .line {
+.buttons-black .line {
   height: 1.4375rem;
   object-fit: cover;
   position: relative;
   width: 0.0625rem;
 }
 
-.buttons .fi-chevron-down {
+.buttons-black .fi-chevron-down {
   height: 1.5rem !important;
   position: relative !important;
   width: 1.5rem !important;
 }
 
 .buttons-blue {
-  align-items: center;
-  background-color: rgba(85, 112, 241, 1);
-  border-radius: 0.75rem;
-  display: inline-flex;
-  gap: 0.625rem;
+  width: 11rem;
+  border-radius: var(--br-xs);
+  background-color: var(--primary-100);
+  height: 36px;
   justify-content: center;
-  padding: 1.0625rem 1rem;
-  position: relative;
+  padding: 17px var(--padding-base);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--paragraph-2-regular-size);
+  color: var(--white);
+  cursor: pointer;
 }
 
 .buttons-blue .label-container-blue {
@@ -238,7 +243,6 @@ input:checked+.slider:before {
   margin-right: -0.0313rem;
   margin-top: -0.4688rem;
   position: relative;
-  width: 8.125rem;
 }
 
 .buttons-blue .save-publish {
