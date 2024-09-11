@@ -6,9 +6,18 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const AddElement = ({ className = "" }) => {
     const location = useNavigate()
+    const [checkedExp, setCheckedExp] = useState(false);
+    const [checked, setChecked] = useState(false);
+    const handleChange = () => {
+        // Change state to the opposite (to ture) when checkbox changes
+        setChecked(!checked);
+    };
+    const handleChangeExp = () => {
+        // Change state to the opposite (to ture) when checkbox changes
+        setCheckedExp(!checkedExp);
+    };
 
-    const [discount, setdiscount] = useState('');
-    const [expiry, setexpiry] = useState('');
+
 
     return (
         <div className="maincontainer2">
@@ -34,16 +43,109 @@ const AddElement = ({ className = "" }) => {
                 <div className="leftcontainer">
                     <div className="leftFrame">
                         <form>
-                            <input className="pname" decoration="filled" type="text" placeholder="Product Name" />
-                            <select className="pcategory" placeholder="Select Product Category">
-                                <option value="Cat1">Category 1</option>
-                                <option value="Cat2">Category 2</option>
-                            </select>
-                            <input className="psellingprice" type="text" placeholder="Selling Price" />
-                            <input className="pcostprice" type="text" placeholder="Cost Price" />
-                            <input className="pquantity" placeholder="Quantity in Stock"
-                                type="number" />
-                            <input className="pordertype" type="text" placeholder="Order Type" />
+                            <div className="input">
+                                <div className="top">
+                                    <div className="input-content">
+                                        <input className="pname" decoration="filled" type="text" placeholder="Product Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="input">
+                                <div className="top">
+                                    <div className="input-content">
+                                        <select className="pcategory" placeholder="Select Product Category">
+                                            <option value="Cat1">Category 1</option>
+                                            <option value="Cat2">Category 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="sellingcost">
+                                <div className="input">
+                                    <div className="top">
+                                        <div className="input-content">
+                                            <input className="psellingprice" type="text" placeholder="Selling Price" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="input">
+                                    <div className="top">
+                                        <div className="input-content">
+                                            <input className="pcostprice" type="text" placeholder="Cost Price" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="input">
+                                <div className="top">
+                                    <div className="input-content">
+                                        <input className="pquantity" placeholder="Quantity in Stock"
+                                            type="number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="input">
+                                <div className="top">
+                                    <div className="input-content">
+                                        <input className="pordertype" type="text" placeholder="Order Type" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="hiddenDiv">
+                                <div className="checkbox">
+                                    <div className="checkboxtxt">Discount</div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked={checked}
+                                            onChange={handleChange} />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                {checked && (
+                                    <div className="sellingcosthidden">
+                                        <div className="input">
+                                            <div className="top">
+                                                <div className="input-content">
+                                                    <select className="disctype" placeholder="Type">
+                                                        <option value="Cat1"> 1</option>
+                                                        <option value="Cat2"> 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="input">
+                                            <div className="top">
+                                                <div className="input-content">
+                                                    <input className="discount" type="text" placeholder="value" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>)
+                                }
+
+                            </div>
+
+                            <div className="hiddenDiv">
+                                <div className="checkbox">
+                                    <div className="checkboxtxt">Expiry Date</div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked={checkedExp}
+                                            onChange={handleChangeExp} />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                {checkedExp && (
+                                    <div className="input">
+                                        <div className="top">
+                                            <div className="input-content">
+                                                <input type="date" className="expiryDate" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         </form>
                     </div>
                     <div className="rightFrame"></div>
@@ -109,4 +211,4 @@ AddElement.propTypes = {
     className: PropTypes.string,
 };
 
-export default AddElement
+export default AddElement;
