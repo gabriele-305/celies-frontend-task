@@ -108,8 +108,9 @@ const AddElement = ({ className = "" }) => {
                                             <div className="top">
                                                 <div className="input-content">
                                                     <select className="disctype" placeholder="Type">
-                                                        <option value="Cat1"> 1</option>
-                                                        <option value="Cat2"> 2</option>
+                                                        <option selected>Type</option>
+                                                        <option value="Cat1">Sconto tipo 1</option>
+                                                        <option value="Cat2">Sconto tipo 2</option>
                                                     </select>
                                                 </div>
                                             </div>
