@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react'
 import './ViewInventory.css'
 import { useLocation, useNavigate } from 'react-router-dom'
-import data from '../data/inventory'
+// import data from '../data/inventory'
+import fs from "fs"
 
-const ViewInventory = () => {
+const ViewInventory = ({ product, setProduct }) => {
     const location = useLocation()
     const navi = useNavigate()
     const { id } = location.state
+    const data = product
     const p = data.find(prod => prod.id === id)
 
-    const unpublish = () => { }
+    const unpublish = () => {
+        data[id - 1].status = data[id - 1].status === "published" ? "unpublished" : "published"
+        setProduct(data)
+        navi("/")
+    }
 
     return (
         <div className='view'>
@@ -32,7 +38,11 @@ const ViewInventory = () => {
                     <select className="edit">
                         <option onClick={() => navi("/add")} value="">Edit Product</option>
                     </select>
-                    <div className='action'>Unpublish Product</div>
+                    {
+                        p.status === "published" ?
+                            <div className='action-unpub' onClick={unpublish}>Unpublish Product</div> :
+                            <div className='action-pub' onClick={unpublish}>Publish Product</div>
+                    }
                 </div>
             </div>
             <div className="view-body">
@@ -59,7 +69,7 @@ const ViewInventory = () => {
                                 <div className='price-label'>
                                     {
                                         p.stock === "0" ?
-                                            <div className="out-of-stock">Out of Stock</div> :
+                                            <div className="out-of-stock2">Out of Stock</div> :
                                             p.stock
                                     }
                                 </div>
