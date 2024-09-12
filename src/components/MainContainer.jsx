@@ -7,6 +7,12 @@ import { useEffect } from "react";
 const MainContainer = ({ className = "" }) => {
   const location = useNavigate()
 
+  const clickHandler = (e, id) => {
+    if (!(e.target.classList.contains("publish-parent"))) {
+      location("/view", { state: { "id": id } })
+    }
+  }
+
   return (
     <div className={`maincontainer ${className}`}>
       <div className="container2">
@@ -244,7 +250,7 @@ const MainContainer = ({ className = "" }) => {
               {/* <div className="tablerowcontainer"> */}
               {
                 data.map((p, index) => (
-                  <Link to="/view" state={{ "id": p.id }} key={index} className="tablerow">
+                  <div onClick={(e) => clickHandler(e, p.id)} key={index} className="tablerow">
                     <div className="prod-controls">
                       <input type="checkbox" className="controls" />
                     </div>
@@ -264,7 +270,7 @@ const MainContainer = ({ className = "" }) => {
                         {
                           p.status === "published" ?
                             <option className="nannys-shop">Publish</option> :
-                            <option className="nannys-shop">Unublish</option>
+                            <option className="nannys-shop">Unpublish</option>
                         }
                       </select>
                     </div>
@@ -275,7 +281,7 @@ const MainContainer = ({ className = "" }) => {
                           <div className="nannys-shop prod-status unpublished">Unpublished</div>
                       }
                     </div>
-                  </Link>
+                  </div>
                 ))
               }
               <div className="tableheader1">

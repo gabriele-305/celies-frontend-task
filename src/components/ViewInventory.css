@@ -196,7 +196,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.out-of-stock {
+.out-of-stock2 {
     color: var(--action-red);
 }
 

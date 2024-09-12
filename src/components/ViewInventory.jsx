@@ -59,7 +59,7 @@ const ViewInventory = () => {
                                 <div className='price-label'>
                                     {
                                         p.stock === "0" ?
-                                            <div className="out-of-stock">Out of Stock</div> :
+                                            <div className="out-of-stock2">Out of Stock</div> :
                                             p.stock
                                     }
                                 </div>
