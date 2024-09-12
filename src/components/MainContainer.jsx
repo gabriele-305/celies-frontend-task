@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import "./MainContainer.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import data from "../data/inventory";
+// import data from "../data/inventory";
 import { useEffect } from "react";
 
-const MainContainer = ({ className = "" }) => {
+const MainContainer = ({ className = "", product, setProduct }) => {
   const location = useNavigate()
+  const data = product
 
   const clickHandler = (e, id) => {
     if (!(e.target.classList.contains("publish-parent"))) {

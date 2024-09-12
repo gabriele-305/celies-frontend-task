@@ -38,7 +38,7 @@
     -moz-appearance: none; */
 }
 
-.action {
+.action-unpub {
     background-color: var(--action-red);
     color: white;
     border: none;
@@ -49,8 +49,23 @@
     cursor: pointer;
 }
 
-.action:hover {
+.action-unpub:hover {
     background-color: red;
+}
+
+.action-pub {
+    background-color: var(--action-green);
+    color: white;
+    border: none;
+    border-radius: var(--br-xs);
+    padding: var(--padding-5xs) var(--padding-2xl);
+    font-weight: 400;
+    font-size: var(--paragraph-2-regular-size);
+    cursor: pointer;
+}
+
+.action-pub:hover {
+    background-color: green;
 }
 
 .view-body {
