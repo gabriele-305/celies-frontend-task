@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './ViewInventory.css'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 // import data from '../data/inventory'
 import fs from "fs"
 
@@ -15,6 +15,19 @@ const ViewInventory = ({ product, setProduct }) => {
         data[id - 1].status = data[id - 1].status === "published" ? "unpublished" : "published"
         setProduct(data)
         navi("/")
+    }
+
+    const checkHandler = (e) => {
+        const val = e.target.checked
+        let boxes = document.querySelectorAll(".table .tablerow-order .controls")
+
+        for (let box of boxes) {
+            box.checked = val
+        }
+    }
+
+    const actionNavi = (e) => {
+        navi(e.target.value)
     }
 
     return (
@@ -35,8 +48,8 @@ const ViewInventory = ({ product, setProduct }) => {
                     </div>
                 </div>
                 <div className="heading-right">
-                    <select className="edit">
-                        <option onClick={() => navi("/add")} value="">Edit Product</option>
+                    <select name='action' className="edit" onChange={actionNavi}>
+                        <option value="/add">Edit Product</option>
                     </select>
                     {
                         p.status === "published" ?
@@ -210,7 +223,7 @@ const ViewInventory = ({ product, setProduct }) => {
                         <div className="table">
                             <div className="tableheader-order">
                                 <div className="category-parent">
-                                    <input type="checkbox" className="controls" />
+                                    <input onChange={checkHandler} type="checkbox" className="controls" />
                                 </div>
                                 <div className="category-parent">
                                     <div className="nannys-shop">Order Date</div>

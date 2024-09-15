@@ -9,8 +9,17 @@ const MainContainer = ({ className = "", product, setProduct }) => {
   const data = product
 
   const clickHandler = (e, id) => {
-    if (!(e.target.classList.contains("publish-parent"))) {
+    if (!(e.target.classList.contains("publish-parent") || e.target.classList.contains("controls"))) {
       location("/view", { state: { "id": id } })
+    }
+  }
+
+  const checkHandler = (e) => {
+    const val = e.target.checked
+    let boxes = document.querySelectorAll(".prod-table .tablerow .controls")
+
+    for (let box of boxes) {
+      box.checked = val
     }
   }
 
@@ -97,7 +106,7 @@ const MainContainer = ({ className = "", product, setProduct }) => {
           </div>
         </div>
         <div className="maincontainer-wrapper">
-          <div className="maincontainer1">
+          <div className="maincontainer1 prod-table">
             <div className="inventory-items-parent">
               <div className="dashboard">Inventory Items</div>
               <div className="left-parent">
@@ -172,7 +181,7 @@ const MainContainer = ({ className = "", product, setProduct }) => {
               <div className="tableheader">
                 {/* <div className="controls-parent"> */}
                 <div className="category-parent">
-                  <input type="checkbox" className="controls" />
+                  <input onChange={checkHandler} type="checkbox" className="controls" />
                 </div>
                 <div className="category-parent">
                   <div className="nannys-shop">Product Name</div>
