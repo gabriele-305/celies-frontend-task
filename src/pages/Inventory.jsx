@@ -17,7 +17,7 @@ const Inventory = () => {
       <Topbar />
       <Routes>
         <Route path="/" element={<MainContainer product={product} setProduct={setProduct} />} />
-        <Route path="/add" element={< AddElement />} />
+        <Route path="/add" element={< AddElement product={product} setProduct={setProduct} />} />
         <Route path="/view" element={<ViewInventory product={product} setProduct={setProduct} />} />
       </Routes>
     </div>
